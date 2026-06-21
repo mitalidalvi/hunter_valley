@@ -1,0 +1,53 @@
+/* Mobile View */
+
+@media (max-width:767px){
+
+.custom-btn{
+    width: 36vw !important;
+    height: 40px;
+
+    border-radius: 12vw;
+    font-size: 12px;
+    padding: 10px;
+}
+}
+
+/* Tablet View */
+
+@media (max-width:1199px){
+
+.custom-btn{
+    width: 14vw;
+    height: 45px;
+
+    border-radius: 5vw;
+    font-size: 12px;
+    padding: 12px;
+}
+
+}
+
+/* Web View */ 
+
+.custom-btn{
+    width: 16vw;
+    height: 40px;         /* 45px */
+    padding: 12px;
+
+    background: #A3B71B;
+    border: 0.5px solid #A3B71B;
+    border-radius: 2.6vw;   /* 50px */
+
+    color: #FFFFFF;
+    font-size: 16px;     
+    font-weight: 400;
+    line-height: 100%;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.custom-btn:hover{
+    background: transparent;
+    color: #A3B71B;
+}

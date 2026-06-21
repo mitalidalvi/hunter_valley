@@ -1,0 +1,1131 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Matter';
+}
+
+/* ================= Navbar Styles Start ================= */
+
+/* Mobile View */
+
+.navbar{
+    width:100%;
+    height:70px;
+    background:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.navbar-container{
+    width:90%;
+    height:100%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar-logo{
+    text-decoration:none;
+    color:#111;
+    font-size:18px;
+    font-weight:700;
+}
+
+.navbar-menu,
+.contact-btn{
+    display:none;
+}
+
+.menu-icon{
+    display:block;
+    font-size:30px;
+    cursor:pointer;
+}
+.mobile-menu{
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: .4s ease;
+    box-shadow: -5px 0 20px rgba(0,0,0,.1);
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-menu a{
+    text-decoration: none;
+    color: #111;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.mobile-menu button{
+    width: 140px;
+    height: 45px;
+    border: 1px solid #D5E03D;
+    border-radius: 30px;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/* Tablet View */
+@media screen and (min-width:768px){
+
+.navbar{
+    /* height:10vw; */
+}
+
+.navbar-logo{
+    font-size:2.5vw;
+}
+
+.menu-icon{
+    display:block;
+    font-size:4vw;
+    cursor:pointer;
+}
+
+.navbar-menu,
+.contact-btn{
+    display:none;
+}
+
+.mobile-menu{
+    top:10vw;
+    height:calc(100vh - 10vw);
+}
+}
+
+/* Desktop View */
+@media screen and (min-width:1200px){
+
+.navbar{
+    height:5.76vw;      /* 83px */
+}
+
+.navbar-menu{
+    display:block;
+}
+
+.navbar-menu ul{
+    display:flex;
+    list-style:none;
+    gap:2.7vw;
+}
+
+.navbar-menu ul li a{
+    text-decoration:none;
+    color:#111;
+    font-size:1.2vw;
+    font-weight:400;
+}
+
+.contact-btn{
+    display:block;
+    width:8vw;
+    height:2.7vw;
+    border:1px solid #D5E03D;
+    border-radius:2vw;
+    background:#fff;
+    font-size:1.2vw;
+    cursor:pointer;
+}
+
+.menu-icon{
+    display:none;
+}
+
+.navbar-logo{
+    font-size:1vw;
+    letter-spacing:.2vw;
+}
+}
+
+/* ================= Navbar Styles End ================= */
+
+
+
+/* ================= Hero Styles Start ================= */
+
+
+
+/* MOBILE */
+@media screen and (max-width:767px){
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px); /* if navbar height = 70px */
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image{
+    object-fit: cover !important;
+    object-position: center;
+}
+
+.overlay{
+    background: rgba(0,0,0,.4);
+}
+
+.hero-content{
+    width: 90%;
+    z-index: 2;
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 3vw;
+    letter-spacing: .8vw;
+    margin-bottom: 4vw;
+    font-size: 12px !important;
+}
+
+.hero-title{
+    /* font-size: 10vw; */
+    font-size: 23px !important;
+    line-height: 1.15;
+    font-weight: 300;
+}
+
+.hero-title span{
+    display: block;
+    font-weight: 700;
+}
+
+.tagline{
+    margin-top: 4vw;
+    padding: 6px 30px !important;
+    font-size: 3vw;
+    gap: 10px !important;
+    flex-wrap: wrap;
+    letter-spacing: 10.5% !important;
+    font-size: 12px !important;
+
+}
+
+.hero-btn{
+    width: 40vw;
+    height: 12vw;
+    margin-top: 8vw;
+    font-size: 3vw;
+}
+
+/* Weather card below content */
+
+.weather-card{
+    position:relative;
+    width:85%;
+    margin:8vw auto 0;
+    right:auto;
+    /* bottom:auto; */
+    bottom: 17vw !important;
+}
+
+.weather-tab{
+    font-size:10px;
+    padding:8px 15px;
+}
+
+.weather-main{
+    padding:20px;
+}
+
+.left h5{
+    font-size:14px;
+}
+
+.temp{
+    font-size:48px;
+}
+
+.temp span{
+    font-size:24px;
+}
+
+.right h4{
+    font-size:14px;
+}
+
+.right p{
+    font-size:11px;
+}
+
+.info-row{
+    margin-top:20px;
+    margin-left: 0 !important;
+}
+
+.info-row p{
+    font-size:12px;
+}
+}
+
+/* Web View */
+
+.hero{
+    width:100%;
+    min-height:112vh;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    /* background:rgba(0,0,0,.35); */
+}
+
+.hero-content{
+    margin-top: 5%;
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
+}
+
+.subtitle{
+    font-size:18px;
+    letter-spacing: 40%;
+    margin-bottom:9px;
+}
+
+.hero-title{
+    font-size:50px;
+    font-weight:300;
+}
+
+.hero-title span{
+    display:block;
+    font-weight:700;
+}
+
+.hero-line {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 12px;
+}
+
+.tagline{
+    margin-top: 36px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        #CDED4E 48%,
+        #D2F24F 0%,
+        #D2F24F 43%,
+        transparent 100%
+    );
+    padding:7px 40px;
+    font-weight:400;
+    line-height: 100%;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    letter-spacing: 28.5%;
+    font-size:18px;
+}
+
+.register-btn{
+    margin-top:33px;
+    width:150px;
+    height:50px;
+    border:1px solid #fff;
+    border-radius:50px;
+    background:transparent;
+    color:white;
+    cursor:pointer;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.weather-card{
+    position:absolute;
+    right:0vw;
+    bottom:7vw;
+    width:18vw;
+    color:#fff;
+    z-index:5;
+}
+
+.weather-top{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.weather-tab{
+    background:#1f1f1f;
+    padding:.5vw 1vw;
+    font-size:.6vw;
+    font-weight:600;
+    clip-path:polygon(10% 0%,100% 0%,100% 100%,0% 100%);
+}
+
+.weather-main{
+    background:#99B81B8C;
+    padding:1.5vw;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left h5{
+    font-size:.9vw;
+    margin-bottom:.7vw;
+}
+
+.temp{
+    font-size:3.5vw;
+    font-weight:700;
+    line-height:1;
+}
+
+.temp span{
+    font-size:1.8vw;
+    font-weight:400;
+}
+
+.right h4{
+    font-size:1vw;
+}
+
+.right p{
+    font-size:.7vw;
+    margin-top:.3vw;
+}
+
+.info-row{
+    display:flex;
+    align-items:center;
+    margin-top:1.4vw;
+    /* margin-left: 50%; */
+    margin-left: 30%;
+}
+
+.info-row2 {
+    margin-left: 0;
+}
+
+.info-row span{
+    color:#b5c93f;
+    margin-right:.5vw;
+}
+
+.info-row p{
+    font-size:.75vw;
+    white-space:nowrap;
+}
+
+.line{
+    flex:1;
+    height:1px;
+    background:#D1F04F;
+    margin-left:1vw;
+}
+
+.scroll-arrow{
+    position:absolute;
+    bottom:10%;
+    color:#CEED4E;
+    font-size:40px;
+    z-index:2;
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+.hero-title{
+    font-size:48px;
+}
+
+.weather-card{
+    width:17vw;
+    right:0vw;
+}
+
+.temp{
+    font-size:4vw;
+}
+
+.left h5,
+.right h4{
+    font-size:1.2vw;
+}
+
+.right p,
+.info-row p{
+    font-size:.9vw;
+}
+
+.weather-tab{
+    font-size:.8vw;
+}
+
+
+}
+
+/* ================= Hero Styles End ================= */
+
+
+/* ================= About Styles Start ================= */
+
+/* Mobile View */
+
+.about {
+
+}
+
+.about .about-container {
+
+}
+
+.about-container .about-image {
+   
+}
+
+.about-container .about-sec {
+
+}
+
+.about-sec .about-content {
+
+}
+
+.about-content .about-para {
+    margin: 16px;
+    /* margin-top: -60%; */
+    margin: -361px 16px 16px;
+
+
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.about-para span {
+    color: #99b81b;
+}
+
+.about-sec .about-multi-sec {
+    margin: 16px;
+}
+
+.about-multi-sec .bout-multi-content {
+
+}
+
+.about-multi-content .about-multi-list {
+    display: flex;
+    gap: 8%;
+    margin-top: 28px;
+    margin-bottom: 34px;
+    justify-content: center;
+}   
+
+.about-multi-list li {
+    color: #c1c1c1;
+    font-size: 16px;
+    font-weight: 600;
+    list-style-type: none;
+}
+
+.about-multi-sec .about-secondary-content {
+
+}
+
+.about-secondary-content h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.about-secondary-content p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.about-secondary-content .about-counting {
+    display: flex;
+    gap: 14%;
+}
+
+.about-counting .counting-item {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.counting-item h3 {
+    color: #99b81b;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.counting-item p {
+    margin-bottom: 20px;
+}
+
+.about-secondary-content .about-secondary-right {
+    
+}
+
+.about-secondary-right .about-image1 {
+     width: 100%;
+    height: 54vh;
+    margin-top: 20px;
+}
+
+/* Tablet View */
+
+@media (min-width: 560px) {
+    .about {
+
+}
+
+.about .about-container {
+
+}
+
+.about-container .about-image {
+   
+}
+
+.about-container .about-sec {
+
+}
+
+.about-sec .about-content {
+    /* margin-top: 20%; */
+    margin-top: 10%;
+}
+
+.about-content .about-para {
+    color: #000;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: -45%;
+
+}
+
+.about-para span {
+    color: #99b81b;
+    font-weight: 700;
+}
+
+.about-sec .about-multi-sec {
+    margin-top: 6%;
+}
+
+.about-multi-sec .about-multi-content {
+
+}
+
+.about-multi-content .about-multi-list {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style-type: none;
+    display: flex;
+}
+
+.about-multi-list li {
+    color: #c1c1c1;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about-multi-sec .about-secondary-content {
+    margin: 70px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-secondary-content h2 {
+    color: #000;
+    margin-bottom: 17px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.about-secondary-content p {
+    /* width: 70%; */
+    width: 85%;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.about-secondary-content .about-counting {
+    gap: 10%;
+    display: flex;
+}
+
+.about-counting .counting-item {
+
+}
+
+.counting-item h3 {
+    color: #99b81b;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+counting-item p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+.about-secondary-content .about-secondary-right {
+    
+}
+
+.about-secondary-right .about-image1 {
+     width: 46vw;
+    height: 60vh;
+}
+}
+
+/* Web View */
+
+@media (min-width: 1025px) {
+.about {
+    /* position: relative; */
+
+     width:100%;
+    background:#fff;
+    padding:3vw 0;
+}
+
+.about .about-container {
+ width:90%;
+    margin:auto;
+}
+
+.about-container .about-image {
+        margin-left: -6%;
+}
+
+.about-container .about-sec {
+    /* position: absolute; */
+}
+
+.about-sec .about-content {
+    /* max-width: 46%; */
+    text-align: center;
+    margin-top:-342px;
+}
+
+.about-content .about-para {
+    color: #000;
+    text-align: center;
+    width: 55%;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.about-para span {
+    font-weight: 700;
+    color: #99B81B;
+}
+
+.about-sec .about-multi-sec {
+    margin-top: 7%;
+}
+
+.about-multi-sec .bout-multi-content {
+
+}
+
+.about-multi-content .about-multi-list {
+    display: flex;
+    list-style-type: none;
+    gap: 51px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.about-multi-list li {
+    color: #C1C1C1;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.about-multi-sec .about-secondary-content {
+    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-secondary-content h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 17px;
+}
+.about-secondary-content p {
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    width: 70%;
+}
+
+.about-secondary-content .about-counting {
+    display: flex;
+    gap: 10%;
+}
+
+.about-counting .counting-item {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.counting-item h3 {
+    font-weight: 600;
+    font-size: 36px;
+    color: #99B81B;
+}
+
+.counting-item p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.about-secondary-content .about-secondary-right {
+   
+}
+
+.about-secondary-right .about-image1 {
+    
+}
+
+} 
+
+/* ================= About Styles End ================= */
+
+
+/* ================= Quote Styles Start ================== */
+
+/* web view */
+
+.quote-section{
+    width:100%;
+    height: 30vw;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    background: #6d67676e;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.quote-bg{
+    object-fit:cover;
+    z-index:-2;
+}
+
+.quote-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,.25);
+    z-index:-1;
+}
+
+.quote-content{
+    width:60%;
+    margin-left:15vw;
+    padding: 59px 0 30px;
+}
+
+.quote-text{
+    color:#FFFFFF;
+    font-size:3vw;
+    font-weight:700;
+    line-height:1.3;
+}
+
+.quote-line{
+    width:38vw;
+    height:.1vw;
+    background:#fff;
+    margin:2vw 0;
+}
+
+.quote-author h4{
+    color:#FFFFFF;
+    font-size:1.2vw;
+    font-weight:600;
+}
+
+.quote-author p{
+    color:#FFFFFF;
+    font-size:.9vw;
+    margin-top:.5vw;
+}
+
+/* Tablet View */ 
+
+@media screen and (max-width:1199px){
+
+.quote-section{
+    /* height:50vw; */
+}
+
+.quote-content{
+    width:75%;
+    margin-left:10vw;
+}
+
+.quote-text{
+    font-size:3vw;
+}
+
+.quote-line{
+    width:50vw;
+}
+
+.quote-author h4{
+    font-size:2vw;
+}
+
+.quote-author p{
+    font-size:1.5vw;
+}
+
+}
+
+
+/* Mobile View */ 
+
+@media screen and (max-width:767px){
+
+.quote-section{
+    height:80vw;
+    justify-content:center;
+}
+
+.quote-content{
+    width:90%;
+    margin-left:0;
+    text-align:center;
+}
+
+.quote-text{
+    font-size:6vw;
+    line-height:1.4;
+}
+
+.quote-line{
+    width:70%;
+    margin:5vw auto;
+}
+
+.quote-author h4{
+    font-size:4vw;
+}
+
+.quote-author p{
+    font-size:3vw;
+}
+
+}
+
+/* ================= Quote Styles End ================== */
+
+
+/* ================= Facility Styles Start ================== */
+
+.facility {
+
+}
+
+.facility .facilityHead {
+
+}
+
+.facility .subPara {
+
+}
+
+.facility .facility-containers {
+
+}
+
+.facility-containers .container {
+
+}
+
+.container .facility-img {
+
+}
+
+.container .facility-content {
+
+}
+
+.facility-content h3 {
+
+}
+
+.facility-content .small-cont {
+
+}
+
+.small-cont p {
+
+}
+
+.facility-content .cont-para {
+
+}
+
+/* Tablet View */
+@media (min-width: 550px) {
+    .facility {
+
+}
+
+.facility .facilityHead {
+
+}
+
+.facility .subPara {
+
+}
+
+.facility .facility-containers {
+
+}
+
+.facility-containers .container {
+
+}
+
+.container .facility-img {
+
+}
+
+.container .facility-content {
+
+}
+
+.facility-content h3 {
+
+}
+
+.facility-content .small-cont {
+
+}
+
+.small-cont p {
+
+}
+
+.facility-content .cont-para {
+    
+}
+}
+
+@media (min-width: 990px) {
+    .facility {
+
+}
+
+.facility .facilityHead {
+    font-size: 3vw;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 19px;
+    margin-left: 7%;
+}
+
+.facility .subPara {
+    font-weight: 300;
+    color: #000000;
+    line-height: 23px;
+    font-size: 1.5vw;
+    margin-left: 7%;
+}
+
+.facility .facility-containers {
+
+}
+
+.facility-containers .container {
+
+}
+
+.container .facility-img {
+
+}
+
+.container .facility-content {
+
+}
+
+.facility-content h3 {
+    font-size: 2vw;
+    margin-bottom: 12px;
+}
+
+.facility-content .small-cont {
+
+}
+
+.small-cont p {
+
+}
+
+.facility-content .cont-para {
+    
+}
+} 
+
+
+
+/* ================= Facility Styles End ================== */
