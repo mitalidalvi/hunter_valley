@@ -1,5 +1,5 @@
 import Image from "next/image";
-import quoteBg from "../../../public/imgs/quote-bg.jpg"
+import quoteBg from "../../../public/imgs/quote-bg.webp"
 
 
 export default function QuoteSection() {
